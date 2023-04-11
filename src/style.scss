@@ -70,12 +70,17 @@ $purple: #55328B;
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
-  padding: 10px 4px;
+  padding: 14px 6px;
   border: none;
   color: $lilla;
   background-color: $purple;
   opacity: 0.6;
   cursor: pointer;
+}
+
+.btn-left:hover,
+.btn-right:hover {
+  opacity: 1;
 }
 
 .btn-left {
