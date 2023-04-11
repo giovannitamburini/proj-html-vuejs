@@ -21,6 +21,10 @@
   text-decoration: none;
 }
 
+img {
+  display: block;
+}
+
 
 // colorazioni
 $white: #FFFFFF;
@@ -57,4 +61,27 @@ $purple: #55328B;
   cursor: pointer;
   background-color: $lightpurple;
   color: $purple;
+}
+
+// button per scorrere le immagini nella prima e nella terza sezione del main
+.btn-left,
+.btn-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  padding: 10px 4px;
+  border: none;
+  color: $lilla;
+  background-color: $purple;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.btn-left {
+  left: 0;
+}
+
+.btn-right {
+  right: 0;
 }

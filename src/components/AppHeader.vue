@@ -54,6 +54,7 @@ $purple: #55328B;
         height: 100%;
         width: 40%;
         padding-top: 80px;
+        // padding condiviso da tutta la pagina ma non dalla Navbar
         padding-left: 45px;
 
         small {
