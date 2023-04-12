@@ -1,10 +1,16 @@
 <script>
 
+import CardSectionOne from "./CardSectionOne.vue";
+
 export default {
     data() {
         return {
             paragraphSectionOne: 'All our delectable pastries are backed fresh in our Kitchen very morning, and are made with all natural, all organic ingredients.',
         }
+    },
+
+    components: {
+        CardSectionOne,
     },
 
     // utilizzo le props per non importare lo store in ogni componente in cui ne ho bisogno, ma solo nel main
@@ -34,13 +40,18 @@ export default {
         <!-- sezione in cui scorrono le immagini -->
         <div id="images-section-one">
 
-            <button @click="$emit('scrollLeftOne')" class="btn-left"><i class="fa-solid fa-chevron-left"></i></button>
+            <!-- bottone che se cliccato attiva la funzione(passata tramite emit) per scorrere le immagini verso sinistra di una misura pari alla larghezza dell'immagine + il gap -->
+            <button @click="$emit('scrollLeftOne', 290, '#container-img-one')" class="btn-left"><i
+                    class="fa-solid fa-chevron-left"></i></button>
 
             <div id="container-img-one">
-                <img v-for="product in productsOne" :src="product.image" alt="">
+                <!-- componente card della singola immagine con le relative informazioni -->
+                <CardSectionOne v-for="(product, index) in productsOne" :product="product"></CardSectionOne>
             </div>
 
-            <button @click="$emit('scrollRightOne')" class="btn-right"><i class="fa-solid fa-chevron-right"></i></button>
+            <!-- bottone che se cliccato attiva la funzione(passata tramite emit) per scorrere le immagini verso destra di una misura pari alla larghezza dell'immagine + il gap -->
+            <button @click="$emit('scrollRightOne', 290, '#container-img-one')" class="btn-right"><i
+                    class="fa-solid fa-chevron-right"></i></button>
         </div>
 
     </div>
@@ -62,29 +73,19 @@ export default {
     }
 
     #images-section-one {
-        width: 60%;
-        height: 100%;
         position: relative;
+        width: calc(280px * 2 + 10px);
 
         #container-img-one {
             display: flex;
             align-items: center;
             flex-flow: row nowrap;
             gap: 10px;
-            width: 100%;
-            height: 100%;
             overflow-x: scroll;
-            overflow-y: hidden;
             scroll-behavior: smooth;
 
             &::-webkit-scrollbar {
                 display: none;
-            }
-
-            img {
-                width: calc(100% / 2 - (10px / 2));
-                // proporzione data dalla grandezza nativa dell'immagine(400x510)
-                aspect-ratio: 40/51;
             }
         }
     }

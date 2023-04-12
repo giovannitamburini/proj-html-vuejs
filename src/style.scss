@@ -69,7 +69,7 @@ $purple: #55328B;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 1;
+  z-index: 3;
   padding: 14px 6px;
   border: none;
   color: $lilla;
@@ -89,4 +89,12 @@ $purple: #55328B;
 
 .btn-right {
   right: 0;
+}
+
+
+// classi per le immagini e le relative descrizioni in hover
+
+.hidetext {
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.15);
 }

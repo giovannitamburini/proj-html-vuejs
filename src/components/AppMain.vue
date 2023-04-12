@@ -21,15 +21,16 @@ export default {
     },
 
     methods: {
-        scrollLeft() {
-            let leftProduct = document.querySelector('#container-img-one');
-            leftProduct.scrollBy(-220, 0);
+        // funzione per scrollare di una misura fissa verso sinistra 
+        scrollLeft(left, container) {
+            let leftProduct = document.querySelector(container);
+            leftProduct.scrollBy(-left, 0);
         },
 
-        scrollRight() {
-            let rightProduct = document.querySelector('#container-img-one');
-            rightProduct.scrollBy(220, 0);
-        }
+        scrollRight(right, container) {
+            let rightProduct = document.querySelector(container);
+            rightProduct.scrollBy(right, 0);
+        },
     }
 }
 </script>
@@ -37,7 +38,7 @@ export default {
 <template>
     <div id="main">
 
-        <SectionOne :productsOne="store.productList" @scrollLeftOne="scrollLeft()" @scrollRightOne="scrollRight()">
+        <SectionOne :productsOne="store.productList" @scrollLeftOne="scrollLeft" @scrollRightOne="scrollRight">
         </SectionOne>
         <SectionTwo></SectionTwo>
     </div>
