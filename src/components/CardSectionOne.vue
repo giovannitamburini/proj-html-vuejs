@@ -34,7 +34,7 @@ export default {
         <img :src="product.image" alt="image product">
 
         <!-- lista visibile tramite z-index, gestito dalle funzioni sopracitate(overImage & leaveImage) -->
-        <ul :class="{ hidetext: hiddenOne }" class="description-one">
+        <ul :class="{ hidetext: hiddenOne }">
             <li>{{ product.name }}</li>
             <li>{{ product.category }}</li>
             <li>{{ product.price }}</li>

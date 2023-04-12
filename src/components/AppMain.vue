@@ -4,6 +4,8 @@ import SectionOne from "./SectionOne.vue";
 // importo la componente che è la seconda sezione del main
 import SectionTwo from "./SectionTwo.vue";
 
+import SectionThree from "./SectionThree.vue";
+
 // importo lo store
 import { store } from "../store.js";
 
@@ -18,6 +20,7 @@ export default {
     components: {
         SectionOne,
         SectionTwo,
+        SectionThree,
     },
 
     methods: {
@@ -41,6 +44,8 @@ export default {
         <SectionOne :productsOne="store.productList" @scrollLeftOne="scrollLeft" @scrollRightOne="scrollRight">
         </SectionOne>
         <SectionTwo></SectionTwo>
+        <SectionThree :productsThree="store.productList" @scrollLeftThree="scrollLeft" @scrollRightThree="scrollRight">
+        </SectionThree>
     </div>
 </template>
 

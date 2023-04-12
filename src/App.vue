@@ -82,6 +82,7 @@ export default {
           image: '/small-cupcake.jpg',
           name: 'Small cupcake',
           category: 'Cupcake, Pastries',
+          price: '$10.00 $19.00'
         }
       ],
 
