@@ -40,7 +40,7 @@ export default {
         <!-- sezione in cui scorrono le immagini -->
         <div id="images-section-one">
 
-            <!-- bottone che se cliccato attiva la funzione(passata tramite emit) per scorrere le immagini verso sinistra di una misura pari alla larghezza dell'immagine + il gap -->
+            <!-- bottone che se cliccato attiva la funzione(passata tramite emit) per scorrere le immagini verso sinistra di una misura pari alla larghezza dell'immagine + il gap(10px) -->
             <button @click="$emit('scrollLeftOne', 290, '#container-img-one')" class="btn-left"><i
                     class="fa-solid fa-chevron-left"></i></button>
 
@@ -49,7 +49,7 @@ export default {
                 <CardSectionOne v-for="(product, index) in productsOne" :product="product"></CardSectionOne>
             </div>
 
-            <!-- bottone che se cliccato attiva la funzione(passata tramite emit) per scorrere le immagini verso destra di una misura pari alla larghezza dell'immagine + il gap -->
+            <!-- bottone che se cliccato attiva la funzione(passata tramite emit) per scorrere le immagini verso destra di una misura pari alla larghezza dell'immagine + il gap(10px) -->
             <button @click="$emit('scrollRightOne', 290, '#container-img-one')" class="btn-right"><i
                     class="fa-solid fa-chevron-right"></i></button>
         </div>
@@ -91,6 +91,3 @@ export default {
     }
 }
 </style>
-
-
-<!-- <div id="section-one" v-for="product in productsOne"> {{ product.name }}</div> -->
