@@ -86,6 +86,33 @@ export default {
         }
       ],
 
+
+      processes: [
+        {
+          title: 'Tell us what you have in mind',
+          activity: 'Manual ingredients selection',
+          description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, unde. Magnam quia eveniet eos tenetur exercitationem, et commodi id sapiente repudiandae temporibus animi aliquid praesentium ex explicabo blanditiis sit laudantium.',
+          image: './bakery-process-1.jpg',
+          order: '01',
+        },
+        {
+          title: 'We start Baking',
+          activity: 'Sweet & delicious',
+          description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, unde. Magnam quia eveniet eos tenetur exercitationem, et commodi id sapiente repudiandae temporibus animi aliquid praesentium ex explicabo blanditiis sit laudantium.',
+          image: './bakery-process-2.jpg',
+          order: '02',
+        },
+        {
+          title: 'Delivered to your home',
+          activity: 'Baked to order & gift wrapped',
+          description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, unde. Magnam quia eveniet eos tenetur exercitationem, et commodi id sapiente repudiandae temporibus animi aliquid praesentium ex explicabo blanditiis sit laudantium.',
+          image: './bakery-process-3.jpg',
+          order: '03',
+        },
+      ],
+
+
+
     }
   },
 
@@ -96,6 +123,8 @@ export default {
 
   created() {
     this.store.productList = this.products;
+
+    this.store.processesList = this.processes;
   }
 }
 </script>
@@ -103,6 +132,7 @@ export default {
 <template>
   <AppHeader :menuHeader="menu"></AppHeader>
   <AppMain></AppMain>
+  <div></div>
 </template>
 
 <style lang="scss" scoped></style>

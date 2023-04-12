@@ -6,6 +6,8 @@ import SectionTwo from "./SectionTwo.vue";
 
 import SectionThree from "./SectionThree.vue";
 
+import SectionFour from "./SectionFour.vue";
+
 // importo lo store
 import { store } from "../store.js";
 
@@ -21,6 +23,7 @@ export default {
         SectionOne,
         SectionTwo,
         SectionThree,
+        SectionFour,
     },
 
     methods: {
@@ -46,12 +49,13 @@ export default {
         <SectionTwo></SectionTwo>
         <SectionThree :productsThree="store.productList" @scrollLeftThree="scrollLeft" @scrollRightThree="scrollRight">
         </SectionThree>
+        <SectionFour :processes="store.processesList"></SectionFour>
     </div>
 </template>
 
 <style lang="scss" scoped>
 #main {
-    padding: 0 45px;
+    padding: 0 70px;
 
     * {
         padding-top: 95px;
