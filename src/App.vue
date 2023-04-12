@@ -111,6 +111,21 @@ export default {
         },
       ],
 
+      shops: [
+        {
+          city: 'New York',
+          image: './new-york.jpg',
+          phone: '1.800.458.556',
+          time: '9.00 AM - 6.00 PM',
+        },
+        {
+          city: 'London',
+          image: './london.jpg',
+          phone: '1.900.558.555',
+          time: '9.00 AM - 6.00 PM',
+        },
+      ],
+
 
 
     }
@@ -125,6 +140,8 @@ export default {
     this.store.productList = this.products;
 
     this.store.processesList = this.processes;
+
+    this.store.shopList = this.shops;
   }
 }
 </script>
