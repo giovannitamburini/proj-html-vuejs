@@ -33,7 +33,7 @@ export default {
             <img :src="product.image" alt="image product">
 
             <!-- cambio lo z-index in base al valore di hiddenThree per mostrare il testo quando sono con il mouse in hover sulla card -->
-            <div :class="{ hidetext: hiddenThree }" class="small hover-choice">{{ overText }}</div>
+            <div :class="{ hidetext: hiddenThree }" class="small hover-choice"><a href="">{{ overText }}</a></div>
         </div>
 
         <!-- interpolazione contenuto tramite stringhe contenute nelle propietà di product -->
@@ -61,7 +61,7 @@ $purple: #55328B;
             z-index: 1;
         }
 
-        .small {
+        a {
             color: white;
         }
 

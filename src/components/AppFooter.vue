@@ -35,10 +35,12 @@ export default {
 
                 <!-- voce del menu statica in cui c'è l'icona del carrello e il numero di articoli in esso -->
                 <li>
+                    <a href="">
+                        <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                        <!-- conteggio prodotti nel carrello -->
+                        <span id="items-cart">0</span>
+                    </a>
                     <!-- icona carrello -->
-                    <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-                    <!-- conteggio prodotti nel carrello -->
-                    <span id="items-cart">0</span>
                 </li>
             </ul>
 

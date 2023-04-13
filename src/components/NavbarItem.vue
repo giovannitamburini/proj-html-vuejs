@@ -34,6 +34,16 @@ export default {
 <style lang="scss" scoped>
 $purple: #55328B;
 
+@mixin before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    border: 1px solid $purple;
+    left: 50%;
+    top: 110%;
+    transform: translateX(-50%);
+}
+
 #navbar {
     height: 60px;
     display: flex;
@@ -58,16 +68,14 @@ $purple: #55328B;
 
             li {
                 position: relative;
+
+                &:first-child:before {
+                    @include before;
+                }
             }
 
             li:hover::before {
-                content: '';
-                position: absolute;
-                width: 100%;
-                border: 1px solid $purple;
-                left: 50%;
-                top: 110%;
-                transform: translateX(-50%);
+                @include before;
             }
         }
     }
