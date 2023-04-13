@@ -35,9 +35,9 @@ export default {
 
         <!-- lista visibile tramite z-index, gestito dalle funzioni sopracitate(overImage & leaveImage) -->
         <ul :class="{ hidetext: hiddenOne }">
-            <li>{{ product.name }}</li>
-            <li>{{ product.category }}</li>
-            <li>{{ product.price }}</li>
+            <li id="name-card">{{ product.name }}</li>
+            <li><small>{{ product.category }}</small></li>
+            <li id="price-card">{{ product.price }}</li>
         </ul>
     </div>
 </template>
@@ -63,6 +63,17 @@ export default {
         justify-content: center;
         align-items: center;
         position: absolute;
+        color: white;
+
+        #name-card {
+            font-size: 1.4em;
+            font-weight: bold;
+        }
+
+        #price-card {
+            padding-top: 10px;
+            font-size: 1.5em;
+        }
     }
 }
 </style>
