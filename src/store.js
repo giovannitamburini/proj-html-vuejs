@@ -7,4 +7,6 @@ export const store = reactive({
     processesList: [],
 
     shopList: [],
+
+    photosList: [],
 });
