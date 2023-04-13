@@ -74,5 +74,6 @@ export default {
     * {
         padding-top: 95px;
     }
+
 }
 </style>

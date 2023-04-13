@@ -1,11 +1,16 @@
 <script>
 
+// importo lo store
+import { store } from "./store.js";
+
 // importo la sezione Header
 import AppHeader from "./components/AppHeader.vue";
 // importo la sezione Main
 import AppMain from "./components/AppMain.vue";
-// importo lo store
-import { store } from "./store.js";
+
+import AppShop from "./components/AppShop.vue";
+
+
 
 
 export default {
@@ -16,6 +21,8 @@ export default {
       menu: [
         'home', 'shop', 'about', 'gallery', 'locations', 'journal', 'contact', 'my account'
       ],
+
+      footerMenu: [],
 
       products: [
         {
@@ -128,7 +135,7 @@ export default {
 
       socialPhotos: [
         './social-1.jpg', './social-2.jpg', './social-3.jpg', './social-4.jpg', './social-5.jpg', './social-6.jpg'
-      ]
+      ],
 
     }
   },
@@ -136,6 +143,7 @@ export default {
   components: {
     AppHeader,
     AppMain,
+    AppShop,
   },
 
   created() {
@@ -146,14 +154,20 @@ export default {
     this.store.shopList = this.shops;
 
     this.store.photosList = this.socialPhotos;
+    // eguaglio l'array 'footeMenu' (il menu da inserire nel footer) al menu dell'header ma senza il primo e l'ultimo elemento
+    this.footerMenu = this.menu.slice(1, 7);
+    // aggiungo un elemento all'array 'footerMenu'
+    this.footerMenu.push('orders');
   }
 }
 </script>
 
 <template>
   <AppHeader :menuHeader="menu"></AppHeader>
+
   <AppMain></AppMain>
-  <div></div>
+
+  <AppShop></AppShop>
 </template>
 
 <style lang="scss" scoped></style>
