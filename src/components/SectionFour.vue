@@ -88,7 +88,7 @@ $purple: #55328B;
             display: flex;
             flex-flow: column wrap;
             justify-content: space-between;
-            padding: 50px;
+            padding: 45px;
             background-color: rgba(0, 0, 0, 0.3);
 
             .text-component:first-child {
@@ -126,7 +126,7 @@ $purple: #55328B;
             order: 1;
 
             .text-component {
-                width: 50%;
+                width: 65%;
             }
         }
 
