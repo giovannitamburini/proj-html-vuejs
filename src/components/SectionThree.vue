@@ -82,7 +82,7 @@ export default {
 
         #container-img-three {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             flex-flow: row nowrap;
             gap: 10px;
             overflow-x: scroll;

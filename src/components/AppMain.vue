@@ -69,7 +69,7 @@ export default {
 
 <style lang="scss" scoped>
 #main {
-    padding: 0 70px;
+    padding: 0 100px;
 
     * {
         padding-top: 95px;

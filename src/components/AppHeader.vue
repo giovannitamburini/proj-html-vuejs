@@ -55,8 +55,8 @@ $purple: #55328B;
         height: 100%;
         width: 30%;
         padding-top: 80px;
-        // padding condiviso da tutta la pagina ma non dalla Navbar
-        padding-left: 45px;
+        // padding della stessa misura del padding della componente AppMain
+        padding-left: 100px;
 
         // div {
         //     font-size: 0.75em;
