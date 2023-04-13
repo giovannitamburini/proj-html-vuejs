@@ -10,6 +10,8 @@ import AppMain from "./components/AppMain.vue";
 
 import AppShop from "./components/AppShop.vue";
 
+import AppFooter from "./components/AppFooter.vue";
+
 
 
 
@@ -137,6 +139,13 @@ export default {
         './social-1.jpg', './social-2.jpg', './social-3.jpg', './social-4.jpg', './social-5.jpg', './social-6.jpg'
       ],
 
+      socialChannels: [
+        '<i class="fa-brands fa-instagram"></i>',
+        '<i class="fa-brands fa-twitter"></i>',
+        '<i class="fa-brands fa-facebook-f"></i>',
+        '<i class="fa-brands fa-pinterest-p"></i>',
+      ]
+
     }
   },
 
@@ -144,6 +153,7 @@ export default {
     AppHeader,
     AppMain,
     AppShop,
+    AppFooter,
   },
 
   created() {
@@ -168,6 +178,8 @@ export default {
   <AppMain></AppMain>
 
   <AppShop></AppShop>
+
+  <AppFooter :menuFooter="footerMenu"></AppFooter>
 </template>
 
 <style lang="scss" scoped></style>
