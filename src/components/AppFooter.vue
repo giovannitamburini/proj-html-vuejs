@@ -51,7 +51,7 @@ export default {
         <div id="footer-right">
 
             <!-- interpolazione del titolo tramite stringa contenuta nei data -->
-            <div>{{ titleSubscribe }}</div>
+            <div id="title-subscribe">{{ titleSubscribe }}</div>
 
             <!-- contenitore dell'input e bottone di sottoscrizione -->
             <div id="registration">
@@ -97,14 +97,15 @@ $lightpurple: #F0EDF5;
         align-items: flex-start;
 
         img {
-            height: 50px;
+            height: 55px;
         }
 
         ul {
             display: flex;
             flex-flow: row wrap;
-            gap: 20px;
+            gap: 25px;
             padding: 20px 0 70px 0;
+            text-transform: capitalize;
             color: $purple;
 
             #items-cart {
@@ -118,6 +119,12 @@ $lightpurple: #F0EDF5;
 
     #footer-right {
         align-items: flex-end;
+
+        #title-subscribe {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: $purple;
+        }
 
         #registration {
 
@@ -138,7 +145,8 @@ $lightpurple: #F0EDF5;
         ul {
             display: flex;
             flex-flow: row nowrap;
-            gap: 20px;
+            gap: 25px;
+            color: $purple;
         }
     }
 }

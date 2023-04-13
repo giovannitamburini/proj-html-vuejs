@@ -30,9 +30,11 @@ export default {
 
         <!-- sezione testo -->
         <div id="text-section-one">
-            <small>our products</small>
+            <!-- classe  -->
+            <div class="small">our products</div>
             <!-- prendo il testo del paragrafo dai data in modo che il template risulti più snello -->
-            <p>{{ paragraphSectionOne }}</p>
+            <!-- classe big presente nello style.scss -->
+            <p class="big">{{ paragraphSectionOne }}</p>
             <!-- classe del button presente nello style.scss -->
             <button class="btn-purple">Start Shopping</button>
         </div>
@@ -67,7 +69,6 @@ export default {
         width: 35%;
 
         p {
-            font-size: 1.5em;
             padding: 13px 0 25px 0;
         }
     }

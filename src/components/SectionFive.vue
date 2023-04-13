@@ -17,8 +17,9 @@ export default {
     <div id="section-five">
 
         <!-- sezione del titolo  -->
-        <div>locations</div>
-        <div id="title-section-five">Visit our Bakeries</div>
+        <!-- classe small & big presenti nello style.scss -->
+        <div class="small">locations</div>
+        <div id="title-section-five" class="big">Visit our Bakeries</div>
 
         <!-- contenitore degli shops -->
         <div id="container-shops">
@@ -30,17 +31,20 @@ export default {
                 <img :src="shop.image" alt="">
 
                 <!-- interpolazione del nome della città tramite la proprietà 'city' dell'array-->
-                <div class="city">{{ shop.city }}</div>
+                <!-- classe big presente nello style.scss -->
+                <div class="big city">{{ shop.city }}</div>
 
                 <ul>
                     <!-- li del numero di telefono -->
                     <li>
-                        <div>call us</div>
+                        <!-- classe small presente nello style.scss -->
+                        <div class="small">call us</div>
                         <div>{{ shop.phone }}</div>
                     </li>
                     <!-- li dell'orario di apertura -->
                     <li>
-                        <div>open all week</div>
+                        <!-- classe small presente nello style.scss -->
+                        <div class="small">open all week</div>
                         <div>{{ shop.time }}</div>
                     </li>
 
@@ -64,10 +68,7 @@ $purple: #55328B;
     text-align: center;
 
     #title-section-five {
-        font-size: 2em;
-        font-weight: bold;
         padding: 8px 0 20px;
-        color: $purple;
     }
 
     #container-shops {
@@ -90,11 +91,8 @@ $purple: #55328B;
             }
 
             .city {
-                font-size: 2em;
-                font-weight: bold;
                 padding-top: 25px;
                 padding-bottom: 20px;
-                color: $purple;
             }
 
             ul {
@@ -102,6 +100,13 @@ $purple: #55328B;
                 flex-flow: row nowrap;
                 justify-content: space-around;
                 padding-bottom: 20px;
+
+                li:first-child,
+                li:nth-child(2) {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    gap: 5px;
+                }
             }
         }
     }

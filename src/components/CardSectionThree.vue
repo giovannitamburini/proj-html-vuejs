@@ -3,6 +3,8 @@ export default {
     data() {
         return {
             hiddenThree: false,
+
+            overText: 'select options / quick view',
         }
     },
 
@@ -27,17 +29,23 @@ export default {
     <div v-on:mouseover="overImage()" v-on:mouseleave="leaveImage()" class="single-image-three">
 
         <div class="container-hover">
+            <!-- interpolazione del link dell'immagine tramite stringa contenuta nella proprietà di product -->
             <img :src="product.image" alt="image product">
 
-            <div :class="{ hidetext: hiddenThree }" class="hover-choice">select options / quick view</div>
+            <!-- cambio lo z-index in base al valore di hiddenThree per mostrare il testo quando sono con il mouse in hover sulla card -->
+            <div :class="{ hidetext: hiddenThree }" class="small hover-choice">{{ overText }}</div>
         </div>
 
-        <div>{{ product.name }}</div>
-        <div>{{ product.price }}</div>
+        <!-- interpolazione contenuto tramite stringhe contenute nelle propietà di product -->
+        <div id="text-card">{{ product.name }}</div>
+        <div id="price-card">{{ product.price }}</div>
+
     </div>
 </template>
 
 <style lang="scss" scoped>
+$purple: #55328B;
+
 .single-image-three {
     min-width: calc(100% / 4 - (10px / 4 * 3));
     text-align: center;
@@ -53,6 +61,10 @@ export default {
             z-index: 1;
         }
 
+        .small {
+            color: white;
+        }
+
         .hover-choice {
             position: absolute;
             width: 100%;
@@ -61,6 +73,14 @@ export default {
             justify-content: center;
             align-items: center;
         }
+    }
+
+    #text-card {
+        padding: 10px 0;
+        text-transform: capitalize;
+        font-size: 1.1em;
+        font-weight: bold;
+        color: $purple;
     }
 }
 </style>

@@ -32,7 +32,7 @@ export default {
         <!-- sezione testo -->
         <div id="text-section-three">
             <!-- interpolo il testo tramite stringhe contenute nei data -->
-            <div>{{ titleSectionThree }}</div>
+            <div class="big">{{ titleSectionThree }}</div>
             <p>{{ paragraphSectionThree }}</p>
             <!-- classe del bottone presente nello style.scss -->
             <button class="btn-purple">Shop All Products</button>
@@ -70,10 +70,6 @@ export default {
     #text-section-three {
         width: 25%;
         text-align: center;
-
-        div {
-            font-size: 1.5em;
-        }
 
         p {
             padding: 15px 0;

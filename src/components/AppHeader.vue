@@ -30,7 +30,8 @@ export default {
 
         <!-- sezione scritta del header -->
         <div id="header-text">
-            <small>fresh & tasty bakery every day</small>
+            <!-- classe small presente nello style.scss -->
+            <div class="small">fresh & tasty bakery every day</div>
             <!-- inserisco il contenuto del del titolo e del paragrafo tramite i data per rendere più snello il template -->
             <h1>{{ title }}</h1>
             <p> {{ paragraph }}</p>
@@ -46,24 +47,25 @@ $purple: #55328B;
 #header {
     // impostazione della grandezza del header e del relativo background
     width: 100%;
-    min-height: 400px;
+    min-height: 500px;
     background-size: cover;
     background-position-x: right 30px;
 
     #header-text {
         height: 100%;
-        width: 40%;
+        width: 30%;
         padding-top: 80px;
         // padding condiviso da tutta la pagina ma non dalla Navbar
         padding-left: 45px;
 
-        small {
-            font-size: 0.65em;
-            text-transform: uppercase;
-        }
+        // div {
+        //     font-size: 0.75em;
+        //     text-transform: uppercase;
+        // }
 
         h1 {
             padding: 10px 0 13px 0;
+            font-size: 3em;
             color: $purple;
         }
 

@@ -53,6 +53,8 @@ $purple: #55328B;
         ul {
             display: flex;
             gap: 15px;
+            font-size: 0.9em;
+            text-transform: uppercase;
 
             li {
                 position: relative;

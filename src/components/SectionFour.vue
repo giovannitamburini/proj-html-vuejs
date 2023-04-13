@@ -3,6 +3,7 @@ export default {
     data() {
         return {
 
+            // testo che inserisco tramite interpolazione nella sezione della citazione
             activityCitation: 'Dont just take our word for it',
             citation: "Finally found an alternative to the mass produced products. Something that incorporates real organic ingredients, nutrient dense wellness while promoting sustainability and activity.",
             authorCitation: "Rachel Cooper, Founder",
@@ -33,7 +34,7 @@ export default {
                 <!-- contenitore del testo posizionato nella parte bassa di ogni processo -->
                 <div class="text-component text-right">
 
-                    <div><small>{{ process.activity }}</small></div>
+                    <div class="small">{{ process.activity }}</div>
 
                     <div class="description">{{ process.description }}</div>
 
@@ -47,7 +48,8 @@ export default {
         <!-- sezione della citazione a cui cambio la posizione tramite la proprietà css 'order' -->
         <div id="citation">
 
-            <div> {{ activityCitation }}</div>
+            <!-- classe presente nello style.scss -->
+            <div class="small"> {{ activityCitation }}</div>
             <div> "{{ citation }}"</div>
             <div>{{ authorCitation }}</div>
 
@@ -91,6 +93,7 @@ $purple: #55328B;
 
             .text-component:first-child {
                 font-size: 2.5em;
+                font-weight: bold;
             }
 
             .text-component {
@@ -140,7 +143,8 @@ $purple: #55328B;
         color: $purple;
 
         div:nth-child(2) {
-            font-size: 2.2em;
+            font-size: 2em;
+            font-weight: bold;
             padding: 20px 0;
         }
     }

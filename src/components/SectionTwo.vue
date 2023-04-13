@@ -40,8 +40,10 @@ export default {
 
 <template>
     <div id="section-two">
-        <small>corporate & weddings</small>
-        <div id="title-two">Baking special moments</div>
+
+        <!-- classe small & big presenti nello style.scss -->
+        <div class="small">corporate & weddings</div>
+        <div id="title-two" class="big">Baking special moments</div>
 
         <!-- container con diplay flex per contenere le due immagini e le relative componenti visibili solo quando vado in hover con il mouse -->
         <div id="container-two">
@@ -53,12 +55,17 @@ export default {
                 <img :src="imageOne" class="image-a" alt="corporate">
                 <!-- immagine visibile solo con il muose in hover -->
                 <img :src="imageOneB" :class="{ imagehover: hiddenTwoA }" class="image-b" alt="corporate bake">
+
                 <!-- testo relativo all'immagine visibile solo con il mouse in hover -->
-                <div :class="{ texthover: hiddenTwoA }" class="text-image-two">
-                    <small>international bakery</small>
-                    <div>corporate events</div>
+                <div :class="{ texthover: hiddenTwoA }" class="text-image">
+
+                    <!-- classi small & big presenti nello style.scss -->
+                    <div class="small">international bakery</div>
+                    <div class="big">corporate events</div>
+                    <!-- classe btn-purple presente nello style.scss -->
                     <button class="btn-purple">explore more</button>
                 </div>
+
             </div>
 
             <!-- contenitore immagine due -->
@@ -68,12 +75,17 @@ export default {
                 <img :src="imageTwo" class="image-a" alt="wedding">
                 <!-- immagine visibile solo con il muose in hover -->
                 <img :src="imageTwoB" :class="{ imagehover: hiddenTwoB }" class="image-b" alt="wedding cake">
+
                 <!-- testo relativo all'immagine visibile solo con il mouse in hover -->
-                <div :class="{ texthover: hiddenTwoB }" class="text-image-two">
-                    <small>international bakery</small>
-                    <div>wedding events</div>
+                <div :class="{ texthover: hiddenTwoB }" class="text-image">
+
+                    <!-- classi small & big presenti nello style.scss -->
+                    <div class="small">private dining hall</div>
+                    <div class="big">wedding & parties</div>
+                    <!-- classe btn-purple presente nello style.scss -->
                     <button class="btn-purple">explore more</button>
                 </div>
+
             </div>
         </div>
     </div>
@@ -86,12 +98,7 @@ export default {
     justify-content: center;
     align-items: center;
 
-    small {
-        text-transform: capitalize;
-    }
-
     #title-two {
-        font-size: 1.5em;
         padding: 13px 0 25px 0;
     }
 
@@ -124,7 +131,7 @@ export default {
                 z-index: 3;
             }
 
-            .text-image-two {
+            .text-image {
                 position: absolute;
                 height: 100%;
                 width: 100%;
@@ -132,8 +139,13 @@ export default {
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                gap: 5px;
+                gap: 8px;
                 color: white;
+
+                .big {
+                    text-transform: capitalize;
+                    color: white;
+                }
             }
 
             .texthover {

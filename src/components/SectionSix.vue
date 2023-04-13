@@ -25,8 +25,9 @@ export default {
         <!-- sezione grande quanto due card in cui è inserito il titolo della sezione e il bottono per seguire la pagina instagram -->
         <div id="sharing">
 
-            <div>made for sharing</div>
-            <div id="title-section-six">let's stay in touch</div>
+            <!-- classe small & big presente nello style.scss -->
+            <div class="small">made for sharing</div>
+            <div class="big">Let's stay in touch</div>
             <!-- classe presente nello style.scss -->
             <button class="btn-purple"><i class="fa-brands fa-instagram"></i> follow us</button>
         </div>
@@ -66,10 +67,6 @@ $lightpurple: #F0EDF5;
         align-items: center;
         gap: 15px;
         background-color: $lightpurple;
-
-        #title-section-six {
-            font-size: 2em;
-        }
     }
 }
 </style>

@@ -21,8 +21,8 @@ export default {
         <!-- testo contenuto nei data -->
         <div id="container-shop-text">
 
-            <div>{{ smallTitle }}</div>
-            <div id="shop-title">{{ title }}</div>
+            <div class="small">{{ smallTitle }}</div>
+            <div id="shop-title" class="big">{{ title }}</div>
             <!-- classe del bottone presente nello style.scss -->
             <button class="btn-white">Shop Now</button>
 
@@ -42,11 +42,15 @@ export default {
     #container-shop-text {
         position: absolute;
         top: 20%;
-        left: 25%;
+        left: 20%;
         color: white;
 
         #shop-title {
             padding: 20px 0 40px 0;
+        }
+
+        .big {
+            color: white;
         }
     }
 }

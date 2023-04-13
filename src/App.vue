@@ -7,12 +7,10 @@ import { store } from "./store.js";
 import AppHeader from "./components/AppHeader.vue";
 // importo la sezione Main
 import AppMain from "./components/AppMain.vue";
-
+// importo la sezione Shop
 import AppShop from "./components/AppShop.vue";
-
+// importo la sezione Footer
 import AppFooter from "./components/AppFooter.vue";
-
-
 
 
 export default {
@@ -95,7 +93,6 @@ export default {
         }
       ],
 
-
       processes: [
         {
           title: 'Tell us what you have in mind',
@@ -173,12 +170,16 @@ export default {
 </script>
 
 <template>
+  <!-- componente header in cui è inserita la componente Navbar. tramite una prop passiamo alla componente l'array 'menu' presente nei data -->
   <AppHeader :menuHeader="menu"></AppHeader>
 
+  <!-- componente Main in cui sono inserite le 6 componenti sezione  -->
   <AppMain></AppMain>
 
+  <!-- componente shop -->
   <AppShop></AppShop>
 
+  <!-- componente footer a cui passiamo tramite una prop l'array 'footerMenu' che è uguale all'array 'menu' ma senza il primo elemento e con un elemento in più alla fine -->
   <AppFooter :menuFooter="footerMenu"></AppFooter>
 </template>
 

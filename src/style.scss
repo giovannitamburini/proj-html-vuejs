@@ -40,6 +40,7 @@ $purple: #55328B;
   padding: 8px 20px;
   border: none;
   border-radius: 4px;
+  font-weight: bold;
 }
 
 .btn-white {
@@ -97,4 +98,15 @@ $purple: #55328B;
 .hidetext {
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.15);
+}
+
+.small {
+  font-size: 0.75em;
+  text-transform: uppercase;
+}
+
+.big {
+  font-size: 2em;
+  font-weight: bold;
+  color: $purple;
 }
