@@ -1,20 +1,11 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap');
 
 // debug
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
+  font-family: 'Lora', serif;
   // tolgo lo stile a tutte le liste presenti
   list-style-type: none;
   // tolgo le decorazioni del testo(sottolineatura e colore dei link), presente di default, in tutti i tag link
