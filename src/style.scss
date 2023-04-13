@@ -1,3 +1,7 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap');
 
 // debug
@@ -5,7 +9,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Lora', serif;
   // tolgo lo stile a tutte le liste presenti
   list-style-type: none;
   // tolgo le decorazioni del testo(sottolineatura e colore dei link), presente di default, in tutti i tag link
@@ -32,6 +35,8 @@ $purple: #55328B;
   border: none;
   border-radius: 4px;
   font-weight: bold;
+  font-family: sans-serif;
+  text-transform: capitalize;
 }
 
 .btn-white {
@@ -103,4 +108,5 @@ $purple: #55328B;
   font-size: 2em;
   font-weight: bold;
   color: $purple;
+  font-family: 'Lora', serif;
 }

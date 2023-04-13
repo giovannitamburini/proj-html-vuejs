@@ -81,6 +81,8 @@ $purple: #55328B;
         font-size: 1.1em;
         font-weight: bold;
         color: $purple;
+        font-family: 'Lora', serif;
+
     }
 }
 </style>

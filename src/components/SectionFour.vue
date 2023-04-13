@@ -94,6 +94,8 @@ $purple: #55328B;
             .text-component:first-child {
                 font-size: 2.5em;
                 font-weight: bold;
+                font-family: 'Lora', serif;
+
             }
 
             .text-component {
@@ -146,6 +148,7 @@ $purple: #55328B;
             font-size: 2em;
             font-weight: bold;
             padding: 20px 0;
+            font-family: 'Lora', serif;
         }
     }
 }

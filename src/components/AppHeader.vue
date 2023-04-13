@@ -62,6 +62,7 @@ $purple: #55328B;
             padding: 10px 0 13px 0;
             font-size: 3em;
             color: $purple;
+            font-family: 'Lora', serif;
         }
 
         p {

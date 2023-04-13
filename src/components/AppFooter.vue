@@ -124,6 +124,7 @@ $lightpurple: #F0EDF5;
             font-size: 1.3em;
             font-weight: bold;
             color: $purple;
+            font-family: 'Lora', serif;
         }
 
         #registration {
