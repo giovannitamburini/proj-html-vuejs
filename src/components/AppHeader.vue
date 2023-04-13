@@ -47,7 +47,7 @@ $purple: #55328B;
 #header {
     // impostazione della grandezza del header e del relativo background
     width: 100%;
-    min-height: 500px;
+    min-height: 550px;
     background-size: cover;
     background-position-x: right 30px;
 
@@ -57,11 +57,6 @@ $purple: #55328B;
         padding-top: 80px;
         // padding della stessa misura del padding della componente AppMain
         padding-left: 100px;
-
-        // div {
-        //     font-size: 0.75em;
-        //     text-transform: uppercase;
-        // }
 
         h1 {
             padding: 10px 0 13px 0;

@@ -34,7 +34,7 @@ $lightpurple: #F0EDF5;
 $purple: #55328B;
 
 
-// button
+// stile dei button condivisi in tutte le sezioni
 .btn-white,
 .btn-purple {
   padding: 8px 20px;
@@ -64,6 +64,7 @@ $purple: #55328B;
   background-color: $lightpurple;
   color: $purple;
 }
+
 
 // button per scorrere le immagini nella prima e nella terza sezione del main
 .btn-left,
@@ -100,6 +101,8 @@ $purple: #55328B;
   background-color: rgba(0, 0, 0, 0.15);
 }
 
+
+// classi per lo stile dei testi in comune con tutte le componenti
 .small {
   font-size: 0.75em;
   text-transform: uppercase;

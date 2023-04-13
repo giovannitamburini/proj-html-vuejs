@@ -64,8 +64,10 @@ export default {
 <style lang="scss" scoped>
 #section-three {
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 
     #text-section-three {
         width: 25%;

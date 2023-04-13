@@ -12,6 +12,7 @@ import AppShop from "./components/AppShop.vue";
 // importo la sezione Footer
 import AppFooter from "./components/AppFooter.vue";
 
+import AppFixed from "./components/AppFixed.vue";
 
 export default {
   data() {
@@ -151,6 +152,7 @@ export default {
     AppMain,
     AppShop,
     AppFooter,
+    AppFixed,
   },
 
   created() {
@@ -173,6 +175,11 @@ export default {
   <!-- componente header in cui è inserita la componente Navbar. tramite una prop passiamo alla componente l'array 'menu' presente nei data -->
   <AppHeader :menuHeader="menu"></AppHeader>
 
+  <!-- componente delle due card in posizione fixed in alto a destra -->
+  <div id="fixed">
+    <AppFixed></AppFixed>
+  </div>
+
   <!-- componente Main in cui sono inserite le 6 componenti sezione  -->
   <AppMain></AppMain>
 
@@ -183,4 +190,11 @@ export default {
   <AppFooter :menuFooter="footerMenu"></AppFooter>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+#fixed {
+  position: fixed;
+  z-index: 1;
+  top: 100px;
+  right: 10px;
+}
+</style>
